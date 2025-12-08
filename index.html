@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
- <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Business Bots Solutions — Interactive Brand Map</title>
@@ -19,7 +20,8 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       height: 100%;
     }
 
@@ -30,7 +32,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: 
+      background-image:
         linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
       background-size: 50px 50px;
@@ -40,8 +42,13 @@
     }
 
     @keyframes gridMove {
-      0% { transform: translate(0, 0); }
-      100% { transform: translate(50px, 50px); }
+      0% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(50px, 50px);
+      }
     }
 
     .container {
@@ -87,8 +94,15 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
     }
 
     .logo-circle {
@@ -112,8 +126,15 @@
     }
 
     @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 40px rgba(0, 255, 65, 0.6); }
-      50% { box-shadow: 0 0 60px rgba(0, 255, 65, 0.9); }
+
+      0%,
+      100% {
+        box-shadow: 0 0 40px rgba(0, 255, 65, 0.6);
+      }
+
+      50% {
+        box-shadow: 0 0 60px rgba(0, 255, 65, 0.9);
+      }
     }
 
     .hero h1 {
@@ -138,8 +159,15 @@
     }
 
     @keyframes neonPulse {
-      0%, 100% { text-shadow: 0 0 10px rgba(0, 255, 65, 0.5); }
-      50% { text-shadow: 0 0 20px rgba(0, 255, 65, 0.8); }
+
+      0%,
+      100% {
+        text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+      }
+
+      50% {
+        text-shadow: 0 0 20px rgba(0, 255, 65, 0.8);
+      }
     }
 
     .cta-button {
@@ -231,12 +259,15 @@
     }
 
     .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
     }
 
     .value-card {
+      flex: 0 1 calc(33% - 20px);
+      min-width: 300px;
       padding: 40px;
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -530,8 +561,13 @@
     }
 
     @keyframes rotate3d {
-      0% { transform: rotateY(0deg) rotateX(10deg); }
-      100% { transform: rotateY(360deg) rotateX(10deg); }
+      0% {
+        transform: rotateY(0deg) rotateX(10deg);
+      }
+
+      100% {
+        transform: rotateY(360deg) rotateX(10deg);
+      }
     }
 
     .logo-3d-inner {
@@ -546,7 +582,7 @@
       padding: 20px;
       overflow: hidden;
     }
-    
+
     .logo-3d-inner img {
       width: 140%;
       height: 140%;
@@ -844,7 +880,7 @@
       width: 100%;
       height: 100%;
     }
-    
+
     .collateral-item img {
       width: 60%;
       height: auto;
@@ -1328,564 +1364,640 @@
       }
     }
   </style>
-  <style>@view-transition { navigation: auto; }</style>
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+  </style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
- </head>
- <body>
+</head>
+
+<body>
   <div class="grid-background"></div><!-- BLOCK 1: HERO -->
   <section class="block hero visible">
-   <div class="container">
-    <div class="logo">
-     <div class="logo-circle"><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762604293/nobacklogo_sichw3.png" alt="Business Bots Solutions Logo">
-     </div>
+    <div class="container">
+      <div class="logo">
+        <div class="logo-circle"><img
+            src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762604293/nobacklogo_sichw3.png"
+            alt="Business Bots Solutions Logo">
+        </div>
+      </div>
+      <h1>BUSINESS BOTS SOLUTIONS</h1>
+      <p class="purpose" style="margin-left: auto; margin-right: auto;">We help businesses transform complexity into
+        clarity through intelligent automation.</p>
+      <div class="tagline" id="hero-tagline">
+        Automation with Purpose.
+      </div><a href="#strategy" class="cta-button" id="hero-cta">Explore the Brand System</a>
     </div>
-    <h1>BUSINESS BOTS SOLUTIONS</h1>
-    <p class="purpose" style="margin-left: auto; margin-right: auto;">We help businesses transform complexity into clarity through intelligent automation.</p>
-    <div class="tagline" id="hero-tagline">
-     Automation with Purpose.
-    </div><a href="#strategy" class="cta-button" id="hero-cta">Explore the Brand System</a>
-   </div>
   </section><!-- BLOCK 2: STRATEGY OVERVIEW -->
   <section class="block strategy" id="strategy">
-   <div class="container">
-    <h2>Strategy Overview</h2>
-    <div class="strategy-content">
-     <div class="strategy-card">
-      <h3>Essence</h3>
-      <p>Clarity before automation.</p>
-     </div>
-     <div class="strategy-card">
-      <h3>Mission</h3>
-      <p>Help organizations automate responsibly — with full transparency and measurable outcomes.</p>
-     </div>
-     <div class="strategy-card">
-      <h3>Vision</h3>
-      <p>To redefine how companies experience digital transformation across Europe, with strategic focus on Dubai and the United Arab Emirates.</p>
-     </div>
+    <div class="container">
+      <h2>Strategy Overview</h2>
+      <div class="strategy-content">
+        <div class="strategy-card">
+          <h3>Essence</h3>
+          <p>Clarity before automation.</p>
+        </div>
+        <div class="strategy-card">
+          <h3>Mission</h3>
+          <p>Help organizations automate responsibly — with full transparency and measurable outcomes.</p>
+        </div>
+        <div class="strategy-card">
+          <h3>Vision</h3>
+          <p>To redefine how companies experience digital transformation across Europe, with strategic focus on Dubai
+            and the United Arab Emirates.</p>
+        </div>
+      </div>
+      <div class="diagram">
+        <div class="diagram-step">
+          <div>
+            Confusion
+          </div>
+        </div>
+        <div class="diagram-arrow">
+          →
+        </div>
+        <div class="diagram-step">
+          <div>
+            Clarity
+          </div>
+        </div>
+        <div class="diagram-arrow">
+          →
+        </div>
+        <div class="diagram-step">
+          <div>
+            Automation
+          </div>
+        </div>
+      </div>
+      <div
+        style="margin-top: 60px; padding: 40px; background: rgba(0, 255, 65, 0.05); border: 1px solid rgba(0, 255, 65, 0.2); border-radius: 12px;">
+        <h3 style="font-size: 28px; color: #00FF41; margin-bottom: 30px; text-align: center;">Expansion Strategy</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+          <div style="padding: 25px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
+            <h4 style="font-size: 20px; color: #00FF41; margin-bottom: 15px;">Phase 1: Foundation</h4>
+            <p style="color: #B0B0B0; line-height: 1.6;">Reach 50 fixed clients through targeted service delivery and
+              relationship building.</p>
+          </div>
+          <div style="padding: 25px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
+            <h4 style="font-size: 20px; color: #00FF41; margin-bottom: 15px;">Phase 2: Internal Operations</h4>
+            <p style="color: #B0B0B0; line-height: 1.6;">Strengthen internal operations with a private app featuring
+              portfolio, services, proofs, tutorials, and assets.</p>
+          </div>
+          <div style="padding: 25px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
+            <h4 style="font-size: 20px; color: #00FF41; margin-bottom: 15px;">Phase 3: Public Platform</h4>
+            <p style="color: #B0B0B0; line-height: 1.6;">Externalize all concepts through a public app with free and pro
+              versions for broader market reach.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="diagram">
-     <div class="diagram-step">
-      <div>
-       Confusion
-      </div>
-     </div>
-     <div class="diagram-arrow">
-      →
-     </div>
-     <div class="diagram-step">
-      <div>
-       Clarity
-      </div>
-     </div>
-     <div class="diagram-arrow">
-      →
-     </div>
-     <div class="diagram-step">
-      <div>
-       Automation
-      </div>
-     </div>
-    </div>
-    <div style="margin-top: 60px; padding: 40px; background: rgba(0, 255, 65, 0.05); border: 1px solid rgba(0, 255, 65, 0.2); border-radius: 12px;">
-     <h3 style="font-size: 28px; color: #00FF41; margin-bottom: 30px; text-align: center;">Expansion Strategy</h3>
-     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-      <div style="padding: 25px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
-       <h4 style="font-size: 20px; color: #00FF41; margin-bottom: 15px;">Phase 1: Foundation</h4>
-       <p style="color: #B0B0B0; line-height: 1.6;">Reach 50 fixed clients through targeted service delivery and relationship building.</p>
-      </div>
-      <div style="padding: 25px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
-       <h4 style="font-size: 20px; color: #00FF41; margin-bottom: 15px;">Phase 2: Internal Operations</h4>
-       <p style="color: #B0B0B0; line-height: 1.6;">Strengthen internal operations with a private app featuring portfolio, services, proofs, tutorials, and assets.</p>
-      </div>
-      <div style="padding: 25px; background: rgba(255, 255, 255, 0.02); border-radius: 8px;">
-       <h4 style="font-size: 20px; color: #00FF41; margin-bottom: 15px;">Phase 3: Public Platform</h4>
-       <p style="color: #B0B0B0; line-height: 1.6;">Externalize all concepts through a public app with free and pro versions for broader market reach.</p>
-      </div>
-     </div>
-    </div>
-   </div>
   </section><!-- BLOCK 3: CORE VALUES GRID -->
   <section class="block values">
-   <div class="container">
-    <h2>Core Values</h2>
-    <div class="values-grid">
-     <div class="value-card">
-      <h3>Clarity</h3>
-      <p>Understanding comes before code. We believe that every automation project must begin with a thorough diagnostic phase, mapping your business processes and identifying opportunities before writing a single line of code. This approach ensures that technology serves your actual needs, not theoretical possibilities.</p>
-     </div>
-     <div class="value-card">
-      <h3>Precision</h3>
-      <p>Automation must fit perfectly. Generic solutions create generic results. We craft bespoke automation systems that align precisely with your workflows, team structure, and business objectives. Every integration point is carefully designed to enhance efficiency without disrupting your operations.</p>
-     </div>
-     <div class="value-card">
-      <h3>Integrity</h3>
-      <p>Your data stays yours. We operate under strict data sovereignty principles, ensuring full transparency in how information is processed and stored. Our systems are designed with privacy-first architecture, giving you complete control and ownership of your business intelligence.</p>
-     </div>
-     <div class="value-card">
-      <h3>Innovation</h3>
-      <p>Evolve with purpose. Technology advances rapidly, but not every innovation serves every business. We carefully evaluate emerging tools and methodologies, adopting only those that deliver measurable value. Our innovation strategy is guided by pragmatism, not trends.</p>
-     </div>
-     <div class="value-card">
-      <h3>Empowerment</h3>
-      <p>Technology under your control. We don't create dependencies—we build capabilities. Our solutions come with comprehensive training and documentation, ensuring your team can manage, modify, and optimize systems independently. True automation empowers people, not replaces them.</p>
-     </div>
+    <div class="container">
+      <h2>Core Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <h3>Clarity</h3>
+          <p>Understanding comes before code. We believe that every automation project must begin with a thorough
+            diagnostic phase, mapping your business processes and identifying opportunities before writing a single line
+            of code. This approach ensures that technology serves your actual needs, not theoretical possibilities.</p>
+        </div>
+        <div class="value-card">
+          <h3>Precision</h3>
+          <p>Automation must fit perfectly. Generic solutions create generic results. We craft bespoke automation
+            systems that align precisely with your workflows, team structure, and business objectives. Every integration
+            point is carefully designed to enhance efficiency without disrupting your operations.</p>
+        </div>
+        <div class="value-card">
+          <h3>Integrity</h3>
+          <p>Your data stays yours. We operate under strict data sovereignty principles, ensuring full transparency in
+            how information is processed and stored. Our systems are designed with privacy-first architecture, giving
+            you complete control and ownership of your business intelligence.</p>
+        </div>
+        <div class="value-card">
+          <h3>Innovation</h3>
+          <p>Evolve with purpose. Technology advances rapidly, but not every innovation serves every business. We
+            carefully evaluate emerging tools and methodologies, adopting only those that deliver measurable value. Our
+            innovation strategy is guided by pragmatism, not trends.</p>
+        </div>
+        <div class="value-card">
+          <h3>Empowerment</h3>
+          <p>Technology under your control. We don't create dependencies—we build capabilities. Our solutions come with
+            comprehensive training and documentation, ensuring your team can manage, modify, and optimize systems
+            independently. True automation empowers people, not replaces them.</p>
+        </div>
+      </div>
     </div>
-   </div>
   </section><!-- BLOCK 4: STORY TIMELINE -->
   <section class="block story">
-   <div class="container">
-    <h2>Our Story</h2>
-    <div class="timeline">
-     <div class="timeline-item">
-      <div class="timeline-content">
-       <div class="timeline-year">
-        2023
-       </div>
-       <h3>Origin</h3>
-       <p>Consulting + prototype pilots</p>
+    <div class="container">
+      <h2>Our Story</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">
+              2023
+            </div>
+            <h3>Origin</h3>
+            <p>Consulting + prototype pilots</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">
+              2024
+            </div>
+            <h3>Evolution</h3>
+            <p>Full automation frameworks</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">
+              2025
+            </div>
+            <h3>Growth</h3>
+            <p>Institutional expansion</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-year">
+              2026
+            </div>
+            <h3>Next</h3>
+            <p>Europe expansion + App Development*</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
       </div>
-      <div class="timeline-dot"></div>
-     </div>
-     <div class="timeline-item">
-      <div class="timeline-content">
-       <div class="timeline-year">
-        2024
-       </div>
-       <h3>Evolution</h3>
-       <p>Full automation frameworks</p>
-      </div>
-      <div class="timeline-dot"></div>
-     </div>
-     <div class="timeline-item">
-      <div class="timeline-content">
-       <div class="timeline-year">
-        2025
-       </div>
-       <h3>Growth</h3>
-       <p>Institutional expansion</p>
-      </div>
-      <div class="timeline-dot"></div>
-     </div>
-     <div class="timeline-item">
-      <div class="timeline-content">
-       <div class="timeline-year">
-        2026
-       </div>
-       <h3>Next</h3>
-       <p>Europe expansion + AI diagnostics</p>
-      </div>
-      <div class="timeline-dot"></div>
-     </div>
     </div>
-   </div>
   </section><!-- BLOCK 5: SERVICES MATRIX -->
   <section class="block services">
-   <div class="container">
-    <h2>Services Matrix</h2>
-    <p class="services-subtitle">Our Systemic Approach</p>
-    <div class="services-grid">
-     <div class="service-card">
-      <h3>Strategic Consulting</h3>
-      <div class="service-price">
-       €200
+    <div class="container">
+      <h2>Services Matrix</h2>
+      <p class="services-subtitle">Our Systemic Approach</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Strategic Consulting</h3>
+          <div class="service-price">
+            €200
+          </div>
+          <p class="service-benefit">Clear process roadmap</p>
+        </div>
+        <div class="service-card">
+          <h3>Interface Redesign</h3>
+          <div class="service-price">
+            €899
+          </div>
+          <p class="service-benefit">Optimized conversions</p>
+        </div>
+        <div class="service-card">
+          <h3>NFC / QR Systems</h3>
+          <div class="service-price">
+            €199–499
+          </div>
+          <p class="service-benefit">Instant, contactless access</p>
+        </div>
+        <div class="service-card">
+          <h3>Multilingual Chatbots</h3>
+          <div class="service-price">
+            €599
+          </div>
+          <p class="service-benefit">24/7 lead automation</p>
+        </div>
+        <div class="service-card">
+          <h3>Full Branding</h3>
+          <div class="service-price">
+            €799
+          </div>
+          <p class="service-benefit">Cohesive, data-driven identity</p>
+        </div>
+        <div class="service-card">
+          <h3>Smart Restaurant Systems</h3>
+          <div class="service-price">
+            €499
+          </div>
+          <p class="service-benefit">Analytics + management</p>
+        </div>
+        <div class="service-card"
+          style="border: 2px solid #00FF41; background: rgba(0, 255, 65, 0.08); grid-column: 1 / -1; max-width: 500px; margin: 0 auto;">
+          <h3>Custom Project Solutions</h3>
+          <div class="service-price">
+            Custom
+          </div>
+          <p class="service-benefit">Fusion of multiple services tailored to create your complete project solution</p>
+        </div>
       </div>
-      <p class="service-benefit">Clear process roadmap</p>
-     </div>
-     <div class="service-card">
-      <h3>Interface Redesign</h3>
-      <div class="service-price">
-       €899
+      <div style="text-align: center; margin-top: 40px;"><a href="#content-engagement" class="cta-button">View Case
+          Examples</a>
       </div>
-      <p class="service-benefit">Optimized conversions</p>
-     </div>
-     <div class="service-card">
-      <h3>NFC / QR Systems</h3>
-      <div class="service-price">
-       €199–499
-      </div>
-      <p class="service-benefit">Instant, contactless access</p>
-     </div>
-     <div class="service-card">
-      <h3>Multilingual Chatbots</h3>
-      <div class="service-price">
-       €599
-      </div>
-      <p class="service-benefit">24/7 lead automation</p>
-     </div>
-     <div class="service-card">
-      <h3>Full Branding</h3>
-      <div class="service-price">
-       €799
-      </div>
-      <p class="service-benefit">Cohesive, data-driven identity</p>
-     </div>
-     <div class="service-card">
-      <h3>Smart Restaurant Systems</h3>
-      <div class="service-price">
-       €499
-      </div>
-      <p class="service-benefit">Analytics + management</p>
-     </div>
-     <div class="service-card" style="border: 2px solid #00FF41; background: rgba(0, 255, 65, 0.08); grid-column: 1 / -1; max-width: 500px; margin: 0 auto;">
-      <h3>Custom Project Solutions</h3>
-      <div class="service-price">
-       Custom
-      </div>
-      <p class="service-benefit">Fusion of multiple services tailored to create your complete project solution</p>
-     </div>
     </div>
-    <div style="text-align: center; margin-top: 40px;"><a href="#content-engagement" class="cta-button">View Case Examples</a>
-    </div>
-   </div>
   </section><!-- BLOCK 6: BRAND IDENTITY -->
   <section class="block brand-identity">
-   <div class="container">
-    <h2>Brand Identity</h2>
-    <div class="identity-grid">
-     <div class="identity-section">
-      <h3>Color System</h3>
-      <div class="color-swatch">
-       <div class="color-box" style="background: #000000;"></div>
-       <div class="color-info">
-        <div class="color-name">
-         Background
+    <div class="container">
+      <h2>Brand Identity</h2>
+      <div class="identity-grid">
+        <div class="identity-section">
+          <h3>Color System</h3>
+          <div class="color-swatch">
+            <div class="color-box" style="background: #000000;"></div>
+            <div class="color-info">
+              <div class="color-name">
+                Background
+              </div>
+              <div class="color-code">
+                #000000
+              </div>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: #00FF41;"></div>
+            <div class="color-info">
+              <div class="color-name">
+                Neon Accent
+              </div>
+              <div class="color-code">
+                #00FF41
+              </div>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: #FFFFFF;"></div>
+            <div class="color-info">
+              <div class="color-name">
+                Text Primary
+              </div>
+              <div class="color-code">
+                #FFFFFF
+              </div>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-box" style="background: #B0B0B0;"></div>
+            <div class="color-info">
+              <div class="color-name">
+                Text Secondary
+              </div>
+              <div class="color-code">
+                #B0B0B0
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="color-code">
-         #000000
+        <div class="identity-section">
+          <h3>Typography</h3>
+          <p style="margin-bottom: 15px;"><strong>Primary:</strong> Arial / System UI</p>
+          <p style="margin-bottom: 15px;"><strong>Weights:</strong> Bold / Medium</p>
+          <p style="margin-bottom: 15px;"><strong>Grid:</strong> 12 columns, 40px padding</p>
+          <p><strong>Motion:</strong> Smooth, linear, no bounce</p>
         </div>
-       </div>
+        <div class="identity-section">
+          <h3>Imagery Guide</h3>
+          <p style="margin-bottom: 10px;">• Neon shadows</p>
+          <p style="margin-bottom: 10px;">• Soft reflections</p>
+          <p style="margin-bottom: 10px;">• 3D icons</p>
+          <p>• Studio-grade renders on white or black</p>
+        </div>
       </div>
-      <div class="color-swatch">
-       <div class="color-box" style="background: #00FF41;"></div>
-       <div class="color-info">
-        <div class="color-name">
-         Neon Accent
-        </div>
-        <div class="color-code">
-         #00FF41
-        </div>
-       </div>
+      <div class="theme-toggle"><button class="toggle-button" onclick="toggleTheme()">Toggle Light Preview</button>
       </div>
-      <div class="color-swatch">
-       <div class="color-box" style="background: #FFFFFF;"></div>
-       <div class="color-info">
-        <div class="color-name">
-         Text Primary
-        </div>
-        <div class="color-code">
-         #FFFFFF
-        </div>
-       </div>
-      </div>
-      <div class="color-swatch">
-       <div class="color-box" style="background: #B0B0B0;"></div>
-       <div class="color-info">
-        <div class="color-name">
-         Text Secondary
-        </div>
-        <div class="color-code">
-         #B0B0B0
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="identity-section">
-      <h3>Typography</h3>
-      <p style="margin-bottom: 15px;"><strong>Primary:</strong> Arial / System UI</p>
-      <p style="margin-bottom: 15px;"><strong>Weights:</strong> Bold / Medium</p>
-      <p style="margin-bottom: 15px;"><strong>Grid:</strong> 12 columns, 40px padding</p>
-      <p><strong>Motion:</strong> Smooth, linear, no bounce</p>
-     </div>
-     <div class="identity-section">
-      <h3>Imagery Guide</h3>
-      <p style="margin-bottom: 10px;">• Neon shadows</p>
-      <p style="margin-bottom: 10px;">• Soft reflections</p>
-      <p style="margin-bottom: 10px;">• 3D icons</p>
-      <p>• Studio-grade renders on white or black</p>
-     </div>
     </div>
-    <div class="theme-toggle"><button class="toggle-button" onclick="toggleTheme()">Toggle Light Preview</button>
-    </div>
-   </div>
   </section><!-- BLOCK 7: LOGO SHOWCASE -->
   <section class="block logo-showcase">
-   <div class="container">
-    <h2>Logo Showcase</h2>
-    <div class="logo-3d-container">
-     <div class="logo-3d" id="logo3d">
-      <div class="logo-3d-inner"><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762604293/nobacklogo_sichw3.png" alt="Business Bots Solutions Logo">
+    <div class="container">
+      <h2>Logo Showcase</h2>
+      <div class="logo-3d-container">
+        <div class="logo-3d" id="logo3d">
+          <div class="logo-3d-inner"><img
+              src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762604293/nobacklogo_sichw3.png"
+              alt="Business Bots Solutions Logo">
+          </div>
+        </div>
       </div>
-     </div>
+      <p class="logo-caption">The mark of connected intelligence — human logic meets automated precision.</p>
+      <div class="logo-controls"><button class="control-button" onclick="pauseRotation()">Pause Rotation</button>
+        <button class="control-button" onclick="resumeRotation()">Resume Rotation</button>
+      </div>
     </div>
-    <p class="logo-caption">The mark of connected intelligence — human logic meets automated precision.</p>
-    <div class="logo-controls"><button class="control-button" onclick="pauseRotation()">Pause Rotation</button> <button class="control-button" onclick="resumeRotation()">Resume Rotation</button>
-    </div>
-   </div>
   </section><!-- BLOCK 8: BRAND EXPERIENCE -->
   <section class="block experience">
-   <div class="container">
-    <h2>Brand Experience</h2>
-    <div class="journey-map">
-     <div class="journey-step">
-      <div class="journey-number">
-       1
+    <div class="container">
+      <h2>Brand Experience</h2>
+      <div class="journey-map">
+        <div class="journey-step">
+          <div class="journey-number">
+            1
+          </div>
+          <h3>Diagnosis</h3>
+          <p>Business audit and data mapping</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-number">
+            2
+          </div>
+          <h3>Activation</h3>
+          <p>NDA, workspace setup, strategy confirmation</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-number">
+            3
+          </div>
+          <h3>Execution</h3>
+          <p>Automation, dashboards, chatbots</p>
+        </div>
+        <div class="journey-step">
+          <div class="journey-number">
+            4
+          </div>
+          <h3>Optimization</h3>
+          <p>Ongoing performance monitoring</p>
+        </div>
       </div>
-      <h3>Diagnosis</h3>
-      <p>Business audit and data mapping</p>
-     </div>
-     <div class="journey-step">
-      <div class="journey-number">
-       2
-      </div>
-      <h3>Activation</h3>
-      <p>NDA, workspace setup, strategy confirmation</p>
-     </div>
-     <div class="journey-step">
-      <div class="journey-number">
-       3
-      </div>
-      <h3>Execution</h3>
-      <p>Automation, dashboards, chatbots</p>
-     </div>
-     <div class="journey-step">
-      <div class="journey-number">
-       4
-      </div>
-      <h3>Optimization</h3>
-      <p>Ongoing performance monitoring</p>
-     </div>
     </div>
-   </div>
   </section><!-- BLOCK 9: BRAND VOICE -->
   <section class="block brand-voice">
-   <div class="container">
-    <h2>Brand Voice</h2>
-    <div class="voice-grid">
-     <div class="voice-card">
-      <h3>Authoritative</h3>
-      <p>"We diagnose before we automate."</p>
-     </div>
-     <div class="voice-card">
-      <h3>Pragmatic</h3>
-      <p>"Technology that makes sense."</p>
-     </div>
-     <div class="voice-card">
-      <h3>Transparent</h3>
-      <p>"We don't hide complexity — we translate it."</p>
-     </div>
-     <div class="voice-card">
-      <h3>Supportive</h3>
-      <p>"We automate with you, not for you."</p>
-     </div>
+    <div class="container">
+      <h2>Brand Voice</h2>
+      <div class="voice-grid">
+        <div class="voice-card">
+          <h3>Authoritative</h3>
+          <p>"We diagnose before we automate."</p>
+        </div>
+        <div class="voice-card">
+          <h3>Pragmatic</h3>
+          <p>"Technology that makes sense."</p>
+        </div>
+        <div class="voice-card">
+          <h3>Transparent</h3>
+          <p>"We don't hide complexity — we translate it."</p>
+        </div>
+        <div class="voice-card">
+          <h3>Supportive</h3>
+          <p>"We automate with you, not for you."</p>
+        </div>
+      </div>
     </div>
-   </div>
   </section><!-- BLOCK 10: CHANNEL STRATEGY -->
   <section class="block channels">
-   <div class="container">
-    <h2>Channel Strategy</h2>
-    <p style="text-align: center; font-size: 20px; color: #B0B0B0; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">Our clients are handpicked. We focus on quality partnerships through strategic channels.</p>
-    <div class="channel-carousel"><a href="https://businessbots.org" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none; color: inherit;">
-      <div class="channel-icon"><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605316/5_kj0ek0.png" alt="Website">
-      </div><h3>Website</h3><p>Core brand hub and portfolio showcase</p></a> <a href="https://www.linkedin.com/in/businessbots/" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none; color: inherit;">
-      <div class="channel-icon"><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605315/3_ft4m4p.png" alt="LinkedIn">
-      </div><h3>LinkedIn</h3><p>Professional authority and case studies</p></a> <a href="mailto:businessbots.info@gmail.com" class="channel-card" style="text-decoration: none; color: inherit;">
-      <div class="channel-icon"><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605316/6_zhvkal.png" alt="Email">
-      </div><h3>Email</h3><p>Direct client communication and diagnostics</p></a> <a href="https://www.instagram.com/businessbot.s?igsh=ZmVhNzNlYWNycW4z" target="_blank" rel="noopener noreferrer" class="channel-card" style="text-decoration: none; color: inherit;">
-      <div class="channel-icon"><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605318/7_tdervg.png" alt="Instagram">
-      </div><h3>Instagram</h3><p>Visual storytelling and brand presence</p></a>
+    <div class="container">
+      <h2>Channel Strategy</h2>
+      <p
+        style="text-align: center; font-size: 20px; color: #B0B0B0; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        Our clients are handpicked. We focus on quality partnerships through strategic channels.</p>
+      <div class="channel-carousel"><a href="https://businessbots.org" target="_blank" rel="noopener noreferrer"
+          class="channel-card" style="text-decoration: none; color: inherit;">
+          <div class="channel-icon"><img
+              src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605316/5_kj0ek0.png" alt="Website">
+          </div>
+          <h3>Website</h3>
+          <p>Core brand hub and portfolio showcase</p>
+        </a> <a href="https://www.linkedin.com/in/businessbots/" target="_blank" rel="noopener noreferrer"
+          class="channel-card" style="text-decoration: none; color: inherit;">
+          <div class="channel-icon"><img
+              src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605315/3_ft4m4p.png" alt="LinkedIn">
+          </div>
+          <h3>LinkedIn</h3>
+          <p>Professional authority and case studies</p>
+        </a> <a href="mailto:businessbots.info@gmail.com" class="channel-card"
+          style="text-decoration: none; color: inherit;">
+          <div class="channel-icon"><img
+              src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605316/6_zhvkal.png" alt="Email">
+          </div>
+          <h3>Email</h3>
+          <p>Direct client communication and diagnostics</p>
+        </a> <a href="https://www.instagram.com/businessbot.s?igsh=ZmVhNzNlYWNycW4z" target="_blank"
+          rel="noopener noreferrer" class="channel-card" style="text-decoration: none; color: inherit;">
+          <div class="channel-icon"><img
+              src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605318/7_tdervg.png" alt="Instagram">
+          </div>
+          <h3>Instagram</h3>
+          <p>Visual storytelling and brand presence</p>
+        </a>
+      </div>
     </div>
-   </div>
   </section><!-- BLOCK 11: COLLATERAL -->
   <section class="block collateral">
-   <div class="container">
-    <h2>Collateral</h2>
-    <p class="collateral-subtitle">Every touchpoint aligned with intelligence.</p>
-    <div class="collateral-gallery"><a href="https://wa.me/34631690524?text=Hi!%20I%20want%20more%20information%20about%20your%20Interfaces%20and%20examples." target="_blank" rel="noopener noreferrer" class="collateral-item">
-      <div class="collateral-item-content">
-       <h4 style="color: #00FF41; font-size: 18px; margin-bottom: 20px; font-weight: bold;">Interfaces</h4><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605318/8_tqnigq.png" alt="Interfaces">
-      </div></a> <a href="https://wa.me/34631690524?text=Hi!%20I%20want%20more%20information%20about%20your%20Flyers%20and%20examples." target="_blank" rel="noopener noreferrer" class="collateral-item">
-      <div class="collateral-item-content">
-       <h4 style="color: #00FF41; font-size: 18px; margin-bottom: 20px; font-weight: bold;">Flyers</h4><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605318/9_o9rceu.png" alt="Flyers">
-      </div></a> <a href="https://wa.me/34631690524?text=Hi!%20I%20want%20more%20information%20about%20your%20Portfolio%20and%20examples." target="_blank" rel="noopener noreferrer" class="collateral-item">
-      <div class="collateral-item-content">
-       <h4 style="color: #00FF41; font-size: 18px; margin-bottom: 20px; font-weight: bold;">Portfolio</h4><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605315/2_mu4dod.png" alt="Portfolio">
-      </div></a> <a href="https://wa.me/34631690524?text=Hi!%20I%20want%20more%20information%20about%20your%20Chatbots%20and%20examples." target="_blank" rel="noopener noreferrer" class="collateral-item">
-      <div class="collateral-item-content">
-       <h4 style="color: #00FF41; font-size: 18px; margin-bottom: 20px; font-weight: bold;">Chatbots</h4><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605316/4_tup1xx.png" alt="Chatbots">
-      </div></a>
+    <div class="container">
+      <h2>Collateral</h2>
+      <p class="collateral-subtitle">Every touchpoint aligned with intelligence.</p>
+      <div class="collateral-gallery"><a
+          href="https://wa.me/34631690524?text=Hi!%20I%20want%20more%20information%20about%20your%20Interfaces%20and%20examples."
+          target="_blank" rel="noopener noreferrer" class="collateral-item">
+          <div class="collateral-item-content">
+            <h4 style="color: #00FF41; font-size: 18px; margin-bottom: 20px; font-weight: bold;">Interfaces</h4><img
+              src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605318/8_tqnigq.png" alt="Interfaces">
+          </div>
+        </a> <a
+          href="https://wa.me/34631690524?text=Hi!%20I%20want%20more%20information%20about%20your%20Flyers%20and%20examples."
+          target="_blank" rel="noopener noreferrer" class="collateral-item">
+          <div class="collateral-item-content">
+            <h4 style="color: #00FF41; font-size: 18px; margin-bottom: 20px; font-weight: bold;">Flyers</h4><img
+              src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605318/9_o9rceu.png" alt="Flyers">
+          </div>
+        </a> <a
+          href="https://wa.me/34631690524?text=Hi!%20I%20want%20more%20information%20about%20your%20Portfolio%20and%20examples."
+          target="_blank" rel="noopener noreferrer" class="collateral-item">
+          <div class="collateral-item-content">
+            <h4 style="color: #00FF41; font-size: 18px; margin-bottom: 20px; font-weight: bold;">Portfolio</h4><img
+              src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605315/2_mu4dod.png" alt="Portfolio">
+          </div>
+        </a> <a
+          href="https://wa.me/34631690524?text=Hi!%20I%20want%20more%20information%20about%20your%20Chatbots%20and%20examples."
+          target="_blank" rel="noopener noreferrer" class="collateral-item">
+          <div class="collateral-item-content">
+            <h4 style="color: #00FF41; font-size: 18px; margin-bottom: 20px; font-weight: bold;">Chatbots</h4><img
+              src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762605316/4_tup1xx.png" alt="Chatbots">
+          </div>
+        </a>
+      </div>
     </div>
-   </div>
   </section><!-- BLOCK 12: CONTENT ENGAGEMENT -->
   <section class="block content-engagement" id="content-engagement">
-   <div class="container">
-    <h2>Content Engagement</h2>
-    <div class="case-studies">
-     <div class="case-study">
-      <div class="case-stats">
-       <div class="stat">
-        <div class="stat-value">
-         +45%
+    <div class="container">
+      <h2>Content Engagement</h2>
+      <div class="case-studies">
+        <div class="case-study">
+          <div class="case-stats">
+            <div class="stat">
+              <div class="stat-value">
+                +45%
+              </div>
+              <div class="stat-label">
+                Conversion Rate
+              </div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">
+                -60%
+              </div>
+              <div class="stat-label">
+                Response Time
+              </div>
+            </div>
+          </div>
+          <p class="case-quote">"Business Bots transformed our customer service. The chatbot handles 80% of inquiries
+            automatically."</p>
         </div>
-        <div class="stat-label">
-         Conversion Rate
+        <div class="case-study">
+          <div class="case-stats">
+            <div class="stat">
+              <div class="stat-value">
+                3x
+              </div>
+              <div class="stat-label">
+                Lead Generation
+              </div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">
+                24/7
+              </div>
+              <div class="stat-label">
+                Availability
+              </div>
+            </div>
+          </div>
+          <p class="case-quote">"The multilingual support opened new markets for us. We're now serving clients across
+            Europe seamlessly."</p>
         </div>
-       </div>
-       <div class="stat">
-        <div class="stat-value">
-         -60%
+        <div class="case-study">
+          <div class="case-stats">
+            <div class="stat">
+              <div class="stat-value">
+                €12K
+              </div>
+              <div class="stat-label">
+                Monthly Savings
+              </div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">
+                95%
+              </div>
+              <div class="stat-label">
+                Accuracy
+              </div>
+            </div>
+          </div>
+          <p class="case-quote">"The smart restaurant system gave us real-time analytics we never had before. Game
+            changer."</p>
         </div>
-        <div class="stat-label">
-         Response Time
-        </div>
-       </div>
       </div>
-      <p class="case-quote">"Business Bots transformed our customer service. The chatbot handles 80% of inquiries automatically."</p>
-     </div>
-     <div class="case-study">
-      <div class="case-stats">
-       <div class="stat">
-        <div class="stat-value">
-         3x
-        </div>
-        <div class="stat-label">
-         Lead Generation
-        </div>
-       </div>
-       <div class="stat">
-        <div class="stat-value">
-         24/7
-        </div>
-        <div class="stat-label">
-         Availability
-        </div>
-       </div>
+      <div class="engagement-cta"><a href="#contact" class="cta-button">Book Your Diagnostic Session</a>
       </div>
-      <p class="case-quote">"The multilingual support opened new markets for us. We're now serving clients across Europe seamlessly."</p>
-     </div>
-     <div class="case-study">
-      <div class="case-stats">
-       <div class="stat">
-        <div class="stat-value">
-         €12K
-        </div>
-        <div class="stat-label">
-         Monthly Savings
-        </div>
-       </div>
-       <div class="stat">
-        <div class="stat-value">
-         95%
-        </div>
-        <div class="stat-label">
-         Accuracy
-        </div>
-       </div>
-      </div>
-      <p class="case-quote">"The smart restaurant system gave us real-time analytics we never had before. Game changer."</p>
-     </div>
     </div>
-    <div class="engagement-cta"><a href="#contact" class="cta-button">Book Your Diagnostic Session</a>
-    </div>
-   </div>
   </section><!-- BLOCK 13: EXPANSION ROADMAP -->
   <section class="block roadmap">
-   <div class="container">
-    <h2>Expansion Roadmap</h2>
-    <div class="roadmap-timeline">
-     <div class="roadmap-item">
-      <div class="roadmap-year">
-       2025
+    <div class="container">
+      <h2>Expansion Roadmap</h2>
+      <div class="roadmap-timeline">
+        <div class="roadmap-item">
+          <div class="roadmap-year">
+            2025
+          </div>
+          <div class="roadmap-content">
+            <h3>Strategy Foundation</h3>
+            <p>Establishing core operational framework and brand positioning</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-year">
+            2025
+          </div>
+          <div class="roadmap-content">
+            <h3>Market Study</h3>
+            <p>In-depth analysis of European and Middle Eastern automation markets</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-year">
+            2025
+          </div>
+          <div class="roadmap-content">
+            <h3>Client List Growth</h3>
+            <p>Strategic acquisition of high-quality client partnerships</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-year">
+            2026
+          </div>
+          <div class="roadmap-content">
+            <h3>Europe Expansion &amp; Fullstack Development</h3>
+            <p>European market expansion with fullstack app creation capabilities and advanced AI-driven solutions</p>
+          </div>
+        </div>
       </div>
-      <div class="roadmap-content">
-       <h3>Strategy Foundation</h3>
-       <p>Establishing core operational framework and brand positioning</p>
-      </div>
-     </div>
-     <div class="roadmap-item">
-      <div class="roadmap-year">
-       2025
-      </div>
-      <div class="roadmap-content">
-       <h3>Market Study</h3>
-       <p>In-depth analysis of European and Middle Eastern automation markets</p>
-      </div>
-     </div>
-     <div class="roadmap-item">
-      <div class="roadmap-year">
-       2025
-      </div>
-      <div class="roadmap-content">
-       <h3>Client List Growth</h3>
-       <p>Strategic acquisition of high-quality client partnerships</p>
-      </div>
-     </div>
-     <div class="roadmap-item">
-      <div class="roadmap-year">
-       2026
-      </div>
-      <div class="roadmap-content">
-       <h3>Europe Expansion &amp; Fullstack Development</h3>
-       <p>European market expansion with fullstack app creation capabilities and advanced AI-driven solutions</p>
-      </div>
-     </div>
     </div>
-   </div>
   </section><!-- BLOCK 14: CONTACT -->
   <section class="block contact" id="contact">
-   <div class="container">
-    <h2>Contact Us</h2>
-    <div class="contact-grid">
-     <div class="contact-info">
-      <h3>Company Info</h3>
-      <div class="contact-item">
-       <div class="contact-details">
-        <div class="contact-label">
-         WhatsApp
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Company Info</h3>
+          <div class="contact-item">
+            <div class="contact-details">
+              <div class="contact-label">
+                WhatsApp
+              </div>
+              <div class="contact-value" id="contact-phone">
+                +34 631 690 524
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-details">
+              <div class="contact-label">
+                Email
+              </div>
+              <div class="contact-value" id="contact-email">
+                businessbots.info@gmail.com
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-details">
+              <div class="contact-label">
+                Location
+              </div>
+              <div class="contact-value" id="contact-location">
+                Palma de Mallorca
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="contact-value" id="contact-phone">
-         +34 631 690 524
+        <div class="contact-form">
+          <h3>Get Started</h3><a href="https://wa.me/34631690524" target="_blank" rel="noopener noreferrer"
+            class="form-cta">💬 Talk to Consultant</a> <a href="https://tw6uphqdc29.typeform.com/to/xioHhUWw"
+            target="_blank" rel="noopener noreferrer" class="form-cta"
+            style="background: rgba(0, 255, 65, 0.1); color: #00FF41; border: 1px solid #00FF41;">📋 Book a
+            Diagnostic</a>
         </div>
-       </div>
       </div>
-      <div class="contact-item">
-       <div class="contact-details">
-        <div class="contact-label">
-         Email
-        </div>
-        <div class="contact-value" id="contact-email">
-         businessbots.info@gmail.com
-        </div>
-       </div>
-      </div>
-      <div class="contact-item">
-       <div class="contact-details">
-        <div class="contact-label">
-         Location
-        </div>
-        <div class="contact-value" id="contact-location">
-         Palma de Mallorca
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="contact-form">
-      <h3>Get Started</h3><a href="https://wa.me/34631690524" target="_blank" rel="noopener noreferrer" class="form-cta">💬 Talk to Consultant</a> <a href="https://tw6uphqdc29.typeform.com/to/xioHhUWw" target="_blank" rel="noopener noreferrer" class="form-cta" style="background: rgba(0, 255, 65, 0.1); color: #00FF41; border: 1px solid #00FF41;">📋 Book a Diagnostic</a>
-     </div>
     </div>
-   </div>
   </section><!-- BLOCK 15: FOOTER -->
   <footer class="block footer">
-   <div class="container">
-    <div class="footer-logo">
-     <div class="footer-logo-circle"><img src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762604293/nobacklogo_sichw3.png" alt="Business Bots Solutions Logo">
-     </div>
+    <div class="container">
+      <div class="footer-logo">
+        <div class="footer-logo-circle"><img
+            src="https://res.cloudinary.com/dxhef6dju/image/upload/v1762604293/nobacklogo_sichw3.png"
+            alt="Business Bots Solutions Logo">
+        </div>
+      </div>
+      <div class="footer-links"><a href="#" class="footer-link">Terms</a> <a href="#" class="footer-link">Privacy</a> <a
+          href="#" class="footer-link">Legal Mentions</a>
+      </div>
+      <p class="footer-copyright">© Business Bots Solutions 2026</p>
+      <p class="footer-tagline">"Automation with purpose, clarity as principle."</p>
     </div>
-    <div class="footer-links"><a href="#" class="footer-link">Terms</a> <a href="#" class="footer-link">Privacy</a> <a href="#" class="footer-link">Legal Mentions</a>
-    </div>
-    <p class="footer-copyright">© Business Bots Solutions 2026</p>
-    <p class="footer-tagline">"Automation with purpose, clarity as principle."</p>
-   </div>
   </footer>
   <script src="/_sdk/element_sdk.js"></script>
   <script>
@@ -2010,5 +2122,7 @@
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99b544ae17fccbce',t:'MTc2MjYwNjk4My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'99b544ae17fccbce',t:'MTc2MjYwNjk4My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
 </html>
